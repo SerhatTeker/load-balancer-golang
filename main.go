@@ -24,7 +24,7 @@ var (
 func main() {
 	listener, err := net.Listen("tcp", listenAddr)
 	if err != nil {
-		log.Fatalf("failed to listen: %s:, err")
+		log.Fatalf("failed to listen: %s:", err)
 	}
 
 	defer listener.Close()
@@ -36,7 +36,7 @@ func main() {
 		}
 
 		backend := chooseBackend()
-		fmt.Println("counter=%d backend=%s\n", counter, backend)
+		fmt.Printf("counter=%d backend=%s\n", counter, backend)
 		go func() {
 			err := proxy(backend, conn)
 			if err != nil {
