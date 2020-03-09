@@ -53,7 +53,7 @@ func proxy(backend string, c net.Conn) error {
 	}
 
 	//c -> bc
-	go io.Copy(bc, bc)
+	go io.Copy(bc, c)
 
 	//bc -> c
 	go io.Copy(c, bc)
