@@ -33,27 +33,27 @@ $ git clone https://github.com/SerhatTeker/load-balancer-golang.git
 
 2. Run local backend servers to proxy:
 
-  with python:
+    with python:
 
-  ```bash
-  $ python3 -m http.server 5000 --bind 127.0.0.1
-  $ python3 -m http.server 5001 --bind 127.0.0.1
-  $ python3 -m http.server 5002 --bind 127.0.0.1
-  ```
+    ```bash
+    $ python3 -m http.server 5000 --bind 127.0.0.1
+    $ python3 -m http.server 5001 --bind 127.0.0.1
+    $ python3 -m http.server 5002 --bind 127.0.0.1
+    ```
 
-  or with npx:
+    or with npx:
 
-  ```bash
-  $ npx http-server -p 5000
-  $ npx http-server -p 5001
-  $ npx http-server -p 5002
-  ```
+    ```bash
+    $ npx http-server -p 5000
+    $ npx http-server -p 5001
+    $ npx http-server -p 5002
+    ```
 
 3. Send request to host:
 
-  ```bash
-  $ curl localhost:8080
-  ```
+    ```bash
+    $ curl localhost:8080
+    ```
 
 4. See the results:
 
